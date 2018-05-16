@@ -115,7 +115,7 @@ def play(board)
     turn(board)
   end
   if won?(board)
-    puts "Contgrats #{winner?(board)}!"
+    puts "Contgrats #{winner(board)}!"
   else
     puts "Tie game!"
   end
