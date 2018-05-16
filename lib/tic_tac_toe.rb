@@ -110,4 +110,13 @@ def position_taken?(board, index)
   end
 end
 
-play(board)
+def play(board)
+  until over?(board)
+    turn(board)
+  end
+  if won?(board)
+    puts "Contgrats #{winner?(board)}!"
+  else
+    puts "Tie game!"
+  end
+end
