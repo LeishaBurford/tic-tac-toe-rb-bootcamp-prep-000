@@ -51,3 +51,17 @@ def winner(board)
     board [win_combination[0]]
   end
 end
+
+def turn_count(board)
+  counter = 0
+  board.each do |place| 
+    if place == "X" || place == "O"
+      counter += 1
+    end
+  end
+  return counter
+end
+
+def current_player(board)
+  return (turn_count(board) % 2 == 0) ? "X" : "O"
+end
